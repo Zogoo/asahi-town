@@ -7,18 +7,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <% if notice.present? %>
     <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
     <p class="alert"><%= alert %></p>
-    <div class="main">
-      <% render partial: 'layouts/partial/header' %>
-      <section id="content">
-        <div class="container_12">
-          <%= yield %>
-        </div>
-      </section>
-    </div>
-    <footer class="footer">
-      <p>© 2017 Asahi town</p>
-    </footer>
+    <% end %>
+    <%= render partial: 'home/partial/header' %>
+    <%= yield %>
+    <%= render partial: 'home/partial/footer' %>
   </body>
 </html>

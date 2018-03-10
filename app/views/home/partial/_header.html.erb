@@ -1,0 +1,18 @@
+<div class="header" data-view="ctaHeader">
+
+  <div class="logo">
+    <%= link_to t('name'), home_path %>
+  </div>
+
+  <div class="action">
+    <div class="login-area">
+      <%= link_to t('login'), new_user_session_path, { class: "login-btn color-primary" } %>
+    </div>
+    <div class="logout-area">
+      <a href="<%= destroy_user_session_path %>">
+        <i class="e-icon -icon-cancel"></i>
+        <span><%= t('logout') %></span>
+      </a>
+    </div>
+  </div>
+</div>

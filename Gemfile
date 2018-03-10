@@ -43,6 +43,7 @@ gem 'jquery-datatables-rails'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-ui-rails'
 gem 'parsley-rails', '~> 2.7'
+gem 'bootstrap-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

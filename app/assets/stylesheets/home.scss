@@ -1,3 +1,411 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a:focus {
+  outline: 0 solid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #3a3a3a;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f4f8;
+}
+
+a,
+a:focus,
+a:hover {
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+  text-decoration: none;
+  outline: none;
+}
+
+.container-fluid {
+  padding: 0 5%;
+}
+
+ol li,
+ul li {
+  list-style: outside none none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.table {
+  display: table;
+  z-index: 9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.table_cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.margin_top_30 {
+  margin-top: 30px;
+}
+
+.section_padding_150 {
+  padding: 150px 0;
+}
+
+.section_padding_100 {
+  padding: 100px 0;
+}
+
+.section_padding_100_0 {
+  padding: 100px 0 0;
+}
+
+.section_padding_0_100 {
+  padding: 0 0 100px;
+}
+
+.section_padding_60 {
+  padding: 60px 0;
+}
+
+.section_padding_100_50 {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.section_padding_100_70 {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.section_heading {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.section_heading > h3 {
+  color: #2196f3;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.section_heading > p {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.section_heading.text-left {
+  text-align: left!important;
+}
+
+.section_heading.white p {
+  color: #fff;
+}
+
+.section_padding_0_50 {
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+
+.preview-welcome-area {
+  position: relative;
+  z-index: 1;
+  background-image: url(/images/overview.jpg);
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 800px;
+}
+
+.preview-welcome-area::after {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.preview-btn {
+  background-color: #fff;
+  border-radius: 47px;
+  color: #3a3a3a;
+  margin-top: 30px;
+  padding: 12px 2em;
+}
+
+.welcome_text_area.preview {
+  margin: 0;
+}
+
+.single_page_content {
+  position: relative;
+  z-index: 1;
+}
+
+.single_page_content .title > h3 {
+  background-color: #f9f9f9;
+  font-size: 18px;
+  padding: 15px 15px 13px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  color: #111;
+  font-weight: 400;
+  margin: 0;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+
+.single_page_content:hover .title > h3 {
+  color: #2196f3;
+}
+
+.single_page_content {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 250ms;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.single_page_content:hover {
+  box-shadow: 0 0 50px 3px rgba(0, 0, 0, 0.2);
+}
+
+.footer_area {
+  position: relative;
+  z-index: 1;
+}
+
+.footer_bottom {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer_bottom p {
+  margin: 0;
+}
+
+.footer_bottom p > a:hover,
+.footer_bottom p > i {
+  color: #2196f3;
+}
+
+.title h3 {
+  font-size: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.preview_text_area h2 {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 400;
+}
+
+.preview_text_area > p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.special_feature_area {
+  background-color: #222222;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.our_related_template {
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.our_related_template .single_related_item {
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.our_related_template .single_related_item img {
+  border-radius: 10px;
+}
+
+.our_related_template h3 {
+  margin-bottom: 30px;
+}
+
+.preview_single_feature {
+  margin-bottom: 50px;
+}
+
+.feature_img > i {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.feature_text h4 {
+  color: #fff;
+  font-weight: 400;
+}
+
+.footer_copywrite_area {
+  background-color: #1a1a1a;
+}
+
+.footer_copywrite_area a,
+.footer_copywrite_area p {
+  color: rgba(255, 255, 255, 0.7);
+}
+@media only screen and (min-width:768px) and (max-width:991px) {
+  .welcome_text_area h2 {
+    font-size: 30px;
+  }
+
+  .preview_text_area h2 {
+    font-size: 40px;
+  }
+
+  .welcome_text_area p {
+    font-size: 17px;
+    line-height: normal;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+  .preview_text_area h2 {
+    font-size: 30px;
+  }
+
+  .preview_text_area > p {
+    font-size: 16px;
+  }
+
+  .welcome_text_area p {
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+@media only screen and (min-width:480px) and (max-width:767px) {
+  .container {
+    width: 450px;
+  }
+
+  .preview_text_area h2 {
+    font-size: 36px;
+  }
+}
+
+.header {
+  font-size: 12px;
+  height: 54px;
+  background-color: #262626;
+  z-index: 100;
+  line-height: 54px;
+  margin-bottom: 1px;
+}
+
+.logo {
+  float: left;
+  padding: 0 20px;
+}
+
+.logo a {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  text-indent: -9999px;
+  height: 40px;
+  width: 160px;
+  background-image: url(/images/logo.jpg);
+  background-size: 160px 40px;
+}
+
+.action {
+  float: right;
+}
+
+.login-area,
+.logout-area {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.login-btn {
+  font-size: 14px;
+  padding: 5px 20px;
+  line-height: 1.5;
+  color: white;
+  -webkit-box-shadow: 0 2px 0 #545454;
+  box-shadow: 0 2px 0 #545454;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-btn.color-primary {
+  background-color: #82b440;
+  -webkit-box-shadow: 0 2px 0 #6f9a37;
+  box-shadow: 0 2px 0 #6f9a37;
+  position: relative;
+}
+
+.logout-area {
+    display: inline-block;
+    border-left: 1px solid #333333;
+    padding: 0 20px;
+}
+
+.logout-area a {
+    color: #999999;
+    text-decoration: none;
+}
+
+.logout-icon:before {
+    font-family: marketplace-glyphs;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    text-align: center;
+    width: 1em;
+    display: inline-block;
+}
+.logout-icon.icon-cancel:before {
+    content: "";
+}

@@ -1,35 +1,41 @@
-<div class="grid_8">
-  <h2 class="top-1 p3">Welcome message!</h2>
-  <% unless current_user %>
-    <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-  <% else %>
-    <%= current_user[:name] %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-  <% end %>
-  <p class="p2">Real Estate is one of free website templates created by TemplateMonster.com team. This website template is optimized for 1280X1024 screen resolution. It is also XHTML &amp; CSS valid.</p>
-  <p class="line-1">Download the basic package of this Real Estate Template (without PSD source) that is available for anyone without registration. If you need PSD source files, please go to the template download page at TemplateMonster to leave the
-    e-mail address that you want the free template ZIP package to be delivered to.</p>
-  <h2 class="p4">Buyers. Sellers. Proprietors. Agents.</h2>
-  <div class="wrap block-1">
-    <div>
-      <img src="images/page1-img1.jpg" alt="" class="img-border">
-      <h3>Selling</h3>
-      <p>Nam liber tempor cum soluta no eleifend option congue nihil imperdiet doming iquod mazim placerat.</p>
-      <a href="#" class="button">More</a>
-    </div>
-    <div>
-      <img src="images/page1-img2.jpg" alt="" class="img-border">
-      <h3>Investing</h3>
-      <p>Nam liber tempor cum soluta no eleifend option congue nihil imperdiet doming iquod mazim placerat.</p>
-      <a href="#" class="button">More</a>
-    </div>
-    <div class="last">
-      <img src="images/page1-img3.jpg" alt="" class="img-border">
-      <h3>Renting</h3>
-      <p>Nam liber tempor cum soluta no eleifend option congue nihil imperdiet doming iquod mazim placerat.</p>
-      <a href="#" class="button">More</a>
+<section class="preview-welcome-area text-center" id="home">
+  <div class="table">
+    <div class="table_cell">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="preview_text_area">
+              <h2><%= t('home.title') %></h2>
+              <p><%= t('home.explanation') %></p>
+              <a href="#" class="btn btn-lg preview-btn"><%= t('home.need_info') %></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<% render partial: 'home/partial/find' %>
-<div class="clear"></div>
+</section>
+<section class="content_area section_padding_100_50">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="section_heading">
+          <h2><%= t('home.menu') %></h2>
+          <p><%= t('home.menu_comment') %></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% @news.each do |news|%>
+      <div class="col-12 col-md-6 col-lg-4 wow fadeInUpBig" data-wow-delay="0.1s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUpBig;">
+        <div class="single_page_content">
+          <%= link_to(content_tag(:img, src: '/images/default.png'), news_home_path(news.id))  %>
+        </div>
+        <div class="title">
+          <h3><%= news.title %></h3>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>

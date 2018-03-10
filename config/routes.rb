@@ -10,9 +10,6 @@ Rails.application.routes.draw do
     resource :my_page
   end
 
-  resource :sessions do
-  end
-
   resource :home, controller: 'home' do
     get 'contact'
     get 'news'
