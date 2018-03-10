@@ -1,5 +1,11 @@
 <div class="grid_8">
   <h2 class="top-1 p3">Welcome message!</h2>
+  <% unless current_user %>
+    <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+  <% else %>
+    <%= current_user[:name] %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <% end %>
   <p class="p2">Real Estate is one of free website templates created by TemplateMonster.com team. This website template is optimized for 1280X1024 screen resolution. It is also XHTML &amp; CSS valid.</p>
   <p class="line-1">Download the basic package of this Real Estate Template (without PSD source) that is available for anyone without registration. If you need PSD source files, please go to the template download page at TemplateMonster to leave the
     e-mail address that you want the free template ZIP package to be delivered to.</p>

@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # User authentication
 gem 'devise'
+gem 'devise-encryptable'
+gem 'omniauth-facebook', '~> 4.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # environment

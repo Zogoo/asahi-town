@@ -4,7 +4,7 @@ class CreateNews < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :content
       t.boolean :publish
-      t.references :admin, foreign_key: { on_delete: :cascade }
+      t.references :users, foreign_key: { on_delete: :cascade }
       t.timestamps
     end
   end

@@ -52,11 +52,6 @@ p {
     margin-bottom: 20px;
 }
 
-input, textarea {
-    border-radius: 0 !important;
-    outline: none !important;
-}
-
 
 img {
     max-width: 100%;
@@ -170,7 +165,7 @@ a:hover {
 .btn:after {
     transition: 0.5s ease;
     -o-transition: 0.5s ease;
-    -webkit-transition: 0.5s ease; 
+    -webkit-transition: 0.5s ease;
     content: '';
     position: absolute;
     right: -45px;
@@ -305,7 +300,7 @@ header h1 a {
     display: inline-block;
     overflow: hidden;
     font-size: 0;
-    line-height: 0;    
+    line-height: 0;
     text-indent: -999px;
     transition: 0s ease;
     -o-transition: 0s ease;
@@ -344,7 +339,7 @@ header .socials {
 
 .socials .fa+.fa {
     margin-left: 20px;
-} 
+}
 
 .socials .fa:hover {
     background-color: #d9593f;
@@ -521,7 +516,7 @@ header .socials {
 .gal img {
     transition: 0.5s ease;
     -o-transition: 0.5s ease;
-    -webkit-transition: 0.5s ease; 
+    -webkit-transition: 0.5s ease;
     box-shadow: 0 0 0 #fff;
     width: 100%;
 }
@@ -659,7 +654,7 @@ header .socials {
     border: none;
     text-indent: -999px;
     z-index: 20;
-    background: url(../images/totop.png) no-repeat left 0; 
+    background: url(../images/totop.png) no-repeat left 0;
     transition: 0s ease;
     -o-transition: 0s ease;
     -webkit-transition: 0s ease;
@@ -674,7 +669,7 @@ header .socials {
 @media only screen and (max-width: 1199px) {
     .extra_wrapper {
         overflow: visible;
-    } 
+    }
 
     .camera_fakehover:before {
         display: none;
@@ -717,11 +712,11 @@ header .socials {
         margin-left: 0;
         margin-top: 30px;
     }
-    
-     .map figure,  
-     .map figure iframe,  
+
+     .map figure,
+     .map figure iframe,
      #form input,
-     #form textarea,  
+     #form textarea,
      #form .success {
         width: 100% !important;
         float: none !important;
@@ -834,5 +829,5 @@ header .socials {
 
 
 @media only screen and (max-width: 479px) {
-    
+
 }
