@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AsahiTown</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="main">
+      <% render partial: 'layouts/partial/header' %>
+      <section id="content">
+        <div class="container_12">
+          <%= yield %>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>© 2017 Asahi town</p>
+    </footer>
+  </body>
+</html>
